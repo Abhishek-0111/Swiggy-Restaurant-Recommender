@@ -33,7 +33,7 @@ class swiggy_scraper(common_ui):
                 self.res.append(self.data.text)
                 self.res_det.append(self.res)
             for i in self.res_det:
-                print(i)
+                print(i) 
             with open("swiggyData.csv", 'w') as f:
                 writer = csv.writer(f)
                 writer.writerow(self.res_det)
@@ -53,5 +53,4 @@ class swiggy_scraper(common_ui):
         Button(self.root, text = 'OK', fg = 'black', bg = '#f57c00', command = self.extract, font = ('Courier 15 bold')).place(x = 550, y = 750, width = 50, height = 40)
         
         
-
 obj = swiggy_scraper()
